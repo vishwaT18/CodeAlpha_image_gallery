@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Image Gallery</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= PRELOADER ================= -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-image"></i>
+                GalleryPro
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="themeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Explore Stunning Image Collections</h1>
+
+            <p>
+                Discover beautiful images from nature, technology,
+                travel, and wildlife through a modern responsive gallery.
+            </p>
+
+            <a href="#gallery" class="btn">
+                View Gallery
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="feature-section">
+        <h2 class="section-title">Why Choose This Gallery?</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h3>Responsive Design</h3>
+                <p>Works perfectly on desktop, tablet and mobile.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-filter"></i>
+                <h3>Dynamic Filtering</h3>
+                <p>Filter images instantly using JavaScript.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-expand"></i>
+                <h3>Lightbox Preview</h3>
+                <p>View images in fullscreen mode.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-moon"></i>
+                <h3>Dark Mode</h3>
+                <p>Switch between dark and light themes.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FILTER BUTTONS ================= -->
+    <section id="gallery">
+
+        <h2 class="section-title">Image Gallery</h2>
+
+        <div class="filter-buttons">
+
+            <button class="filter-btn active"
+                data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn"
+                data-filter="nature">
+                Nature
+            </button>
+
+            <button class="filter-btn"
+                data-filter="technology">
+                Technology
+            </button>
+
+            <button class="filter-btn"
+                data-filter="animals">
+                Animals
+            </button>
+
+            <button class="filter-btn"
+                data-filter="travel">
+                Travel
+            </button>
+
+        </div>
+
+        <!-- ================= GALLERY ================= -->
+        <div class="gallery">
+
+            <!-- Nature -->
+
+            <div class="gallery-item nature">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/10/600/400"
+                    alt="Nature">
+                <div class="overlay">
+                    <h3>Forest View</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item nature">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/11/600/400"
+                    alt="Nature">
+                <div class="overlay">
+                    <h3>Mountain Peak</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item nature">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/12/600/400"
+                    alt="Nature">
+                <div class="overlay">
+                    <h3>Green Valley</h3>
+                </div>
+            </div>
+
+            <!-- Technology -->
+
+            <div class="gallery-item technology">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/180/600/400"
+                    alt="Technology">
+                <div class="overlay">
+                    <h3>Modern Laptop</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item technology">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/160/600/400"
+                    alt="Technology">
+                <div class="overlay">
+                    <h3>Programming Setup</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item technology">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/119/600/400"
+                    alt="Technology">
+                <div class="overlay">
+                    <h3>Technology Hub</h3>
+                </div>
+            </div>
+
+            <!-- Animals -->
+
+            <div class="gallery-item animals">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/237/600/400"
+                    alt="Animals">
+                <div class="overlay">
+                    <h3>Dog Portrait</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item animals">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/433/600/400"
+                    alt="Animals">
+                <div class="overlay">
+                    <h3>Wild Animal</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item animals">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/593/600/400"
+                    alt="Animals">
+                <div class="overlay">
+                    <h3>Nature Wildlife</h3>
+                </div>
+            </div>
+
+            <!-- Travel -->
+
+            <div class="gallery-item travel">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/1015/600/400"
+                    alt="Travel">
+                <div class="overlay">
+                    <h3>Travel Destination</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item travel">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/1040/600/400"
+                    alt="Travel">
+                <div class="overlay">
+                    <h3>City Tour</h3>
+                </div>
+            </div>
+
+            <div class="gallery-item travel">
+                <img loading="lazy"
+                    src="https://picsum.photos/id/1039/600/400"
+                    alt="Travel">
+                <div class="overlay">
+                    <h3>Beach Vacation</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox" id="lightbox">
+
+        <span class="close-btn">&times;</span>
+
+        <button class="prev-btn">
+            ❮
+        </button>
+
+        <img id="lightbox-img">
+
+        <div class="lightbox-content">
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-description">
+                Beautiful image from gallery collection.
+            </p>
+        </div>
+
+        <button class="next-btn">
+            ❯
+        </button>
+
+    </div>
+
+    <!-- ================= FEATURES SECTION ================= -->
+    <section id="features" class="features">
+        <h2 class="section-title">Project Features</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>CSS Grid Gallery</h3>
+                <p>Professional gallery layout with responsiveness.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Lazy Loading</h3>
+                <p>Optimized image performance.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Keyboard Support</h3>
+                <p>Navigate images using arrow keys.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Smooth Animation</h3>
+                <p>Modern transitions and hover effects.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+
+        <h3>GalleryPro</h3>
+
+        <div class="social-icons">
+
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-github"></i>
+            </a>
+
+        </div>
+
+        <p>
+            © 2026 Interactive Image Gallery.
+            All Rights Reserved.
+        </p>
+
+        <button id="topBtn">
+            ↑
+        </button>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
